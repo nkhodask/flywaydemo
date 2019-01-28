@@ -19,12 +19,12 @@ pipeline {
 
           stage('Code Test') {
               steps {
-                bat "mvn deploy"
+                bat "mvn clean compile"
         }
     }
         stage('Code Deployment') {
               steps {
-                bat "mvn deploy"
+                bat "mvn clean compile"
         }
     }
 
