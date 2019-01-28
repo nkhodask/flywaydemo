@@ -11,13 +11,18 @@ pipeline {
         }
     }
 
-         stage('testing stage') {
+         stage('Database Deployment') {
              steps {
                 bat "mvn test"
         }
     }
 
-          stage('deployment stage') {
+          stage('Code Test') {
+              steps {
+                bat "mvn deploy"
+        }
+    }
+        stage('Code Deployment') {
               steps {
                 bat "mvn deploy"
         }
